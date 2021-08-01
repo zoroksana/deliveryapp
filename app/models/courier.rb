@@ -1,4 +1,5 @@
 class Courier < ApplicationRecord
+
   has_many :packages, dependent: :destroy
 
   validates :name, presence: true, length: { maximum: 50 }
@@ -6,4 +7,6 @@ class Courier < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
+
+
 end

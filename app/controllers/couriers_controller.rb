@@ -8,7 +8,6 @@ class CouriersController < ApplicationController
 
   def show
     @packages = @courier.packages
-    @package = current_courier.packages.build
   end
 
   def new
